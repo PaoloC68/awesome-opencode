@@ -46,7 +46,9 @@ function generateEntryHtml(entry) {
   const isDiscussion = entry.repo.includes('/discussions/');
   const repoMatch = entry.repo.match(/github\.com\/(?!gist\.)([^\/]+)\/([^\/]+)/);
 
-  let summaryContent = `<b>${entry.name}</b>`;
+  // Escape @ to prevent GitHub from rendering user/org mentions inside HTML tags
+  const safeName = entry.name.replace(/@/g, '&#64;');
+  let summaryContent = `<b>${safeName}</b>`;
 
   // Add star badge if it's a GitHub repo (not a gist or discussion)
   if (repoMatch && !isGist && !isDiscussion) {
