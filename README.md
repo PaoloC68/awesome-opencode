@@ -743,38 +743,7 @@ startup.
 <details>
   <summary><b>opencode-cost-guard</b> <img src="https://badgen.net/github/stars/jjmartres/opencode-cost-guard" height="14"/> - <i>Warn or stop your OpenCode session when it hits a spending limit</i></summary>
   <blockquote>
-    opencode-cost-guard monitors your session cost in real time and fires a
-warning message when you approach your budget, then a limit-reached alert
-when you cross it.
-OpenCode has no built-in per-session cost cap. This plugin fills that gap
-with a single line of config.
-**Features**
-- Early warning at a configurable percentage of your budget (default 80%)
-- Hard limit alert in warn or block mode when the threshold is crossed
-- Each alert fires once per session — no spam
-- Per-project config overrides the global one
-- Zero dependencies, one line to install
-**Install**
-Add to `~/.config/opencode/opencode.json`:
-```json
-{ "plugins": ["opencode-cost-guard"] }
-
-**Configure**
-Drop a cost-guard.config.json in ~/.config/opencode/:
-```json
-{
-  "maxCostUsd": 20.0,
-  "warnAtPercent": 80,
-  "mode": "warn"
-}
-
-Set mode to "block" to stop the session when the limit is reached.
-Set COST_GUARD_DEBUG=1 to enable verbose per-event logging.
-
-Note: The limit is reactive — it fires after a response completes,
-not before. One expensive response can push you over before the plugin
-catches it.
-
+    Monitors session cost in real time and fires a warning when you approach your budget, then a hard alert when you cross it. Supports warn and block modes, per-project config overrides, and zero dependencies.
     <br><br>
     <a href="https://github.com/jjmartres/opencode-cost-guard">🔗 <b>View Repository</b></a>
   </blockquote>
