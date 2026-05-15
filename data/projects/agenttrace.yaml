@@ -1,0 +1,4 @@
+name: agenttrace
+repo: https://github.com/luoyuctl/agenttrace
+tagline: Local TUI for OpenCode and AI coding agent session traces
+description: Local-first Bubble Tea TUI for inspecting OpenCode-style and other coding-agent logs with cost, failures, latency, anomalies, health gates, and diffs.
